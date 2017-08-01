@@ -86,7 +86,7 @@ J = 1 / m * sum(sum((-Y .* log(A3) - (1 - Y) .* log(1 - A3)))) + Jreg;
 % step 2
 delta3 = A3 - Y;
 % step 3
-delta2 = (delta3 * Theta2 .* sigmoidGradient([ones(size(Z2), 1) Z2]))(:, 2:end);
+delta2 = (delta3 * Theta2).*[ones(size(z2,1),1) sigmoidGradient(Z2)];
 
 % step 4
 Delta2 = delta3' * A2;

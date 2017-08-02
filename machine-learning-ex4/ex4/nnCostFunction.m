@@ -73,7 +73,7 @@ end
 % add ones to the A matrices
 A1 = [ones(m, 1) X];
 Z2 = A1 * Theta1';
-A2 = [ones(size(Z2), 1) sigmoid(Z2)];
+A2 = [ones(size(Z2,1), 1) sigmoid(Z2)];
 Z3 = A2 * Theta2';
 A3 = sigmoid(Z3);
 
